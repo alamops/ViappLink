@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="br.com.oztechnology.ViappLink" version="1.0.1">
+    <name>ViappLink</name>
+    <description>Viapp Link</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,viapplink</keywords>
+    <js-module src="www/ViappLink.js" name="WazeLink">
+        <clobbers target="ViappLink.open" />
+    </js-module>
+	
+    <platform name="android">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="ViappLink">
+                <param name="android-package" value="br.com.oztechnology.ViappLink.ViappLink" /> 
+            </feature>
+        </config-file>
+        <source-file src="src/android/br/com/oztechnology/ViappLink/ViappLink.java"
+                             target-dir="src/br/com/oztechnology/ViappLink" />
+    </platform>
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="ViappLink">
+                <param name="ios-package" value="ViappLink" /> 
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ViappLink.h" />
+        <source-file src="src/ios/ViappLink.m" />
+    </platform>
+
+</plugin>
