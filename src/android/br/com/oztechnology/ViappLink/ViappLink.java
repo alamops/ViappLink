@@ -19,7 +19,7 @@ public class ViappLink extends CordovaPlugin {
 
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
         
-        url = "market://details?id=br.com.bluepen.viapp";
+        String url = "market://details?id=br.com.bluepen.viapp";
         Intent intent = null;
         intent = new Intent(Intent.ACTION_VIEW);
         // Omitting the MIME type for file: URLs causes "No Activity found to handle Intent".
